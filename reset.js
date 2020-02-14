@@ -1,7 +1,7 @@
 const input_resetButton = document.querySelector("input.resetButton");
 
 function resetNum() {
-    p_outputNum.innerText = 0;
+    textarea_outputNum.textContent = 0; //input.js변수
 }
 
 input_resetButton.addEventListener("click", resetNum);

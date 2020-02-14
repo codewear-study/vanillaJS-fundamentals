@@ -1,26 +1,26 @@
-const p_outputNum = document.querySelector("p.outputNum");
+const textarea_outputNum = document.querySelector("textarea.outputNum");
 const input_increaseButton = document.querySelector("input.increaseButton");
 const input_decreaseButton = document.querySelector("input.decreaseButton");
 
 function decreaseButtonAction(e){
-    p_outputNum.innerText--;
+    textarea_outputNum.textContent--;
 }
 
 function increaseButtonAction(e){
-    p_outputNum.innerText++;
+    textarea_outputNum.textContent++;
 }
 
 function decreaseKeyAction(e){
     const keyCode = e.key;
     if(keyCode === '-'){
-        p_outputNum.innerText--;
+        textarea_outputNum.textContent--;
     }
 }
 
 function increaseKeyAction(e){
     const keyCode = e.key;
     if(keyCode === '+'){
-        p_outputNum.innerText++;
+        textarea_outputNum.textContent++;
     }
 }
 
