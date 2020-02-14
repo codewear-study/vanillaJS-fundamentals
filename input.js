@@ -1,26 +1,48 @@
 const textarea_outputNum = document.querySelector("textarea.outputNum");
 const input_increaseButton = document.querySelector("input.increaseButton");
 const input_decreaseButton = document.querySelector("input.decreaseButton");
+const input_stepArea = document.querySelector("input.stepArea");
+
 
 function decreaseButtonAction(e){
-    textarea_outputNum.textContent--;
+    var temp = textarea_outputNum.textContent;
+    var temp2 = input_stepArea.value;
+    temp *= 1;
+    temp2 *= 1;
+    temp -= temp2;
+    textarea_outputNum.textContent = temp;
 }
 
 function increaseButtonAction(e){
-    textarea_outputNum.textContent++;
+    var temp = textarea_outputNum.textContent;
+    var temp2 = input_stepArea.value;
+    temp *= 1;
+    temp2 *= 1;
+    temp += temp2;
+    textarea_outputNum.textContent = temp;
 }
 
 function decreaseKeyAction(e){
     const keyCode = e.key;
     if(keyCode === '-'){
-        textarea_outputNum.textContent--;
+        var temp = textarea_outputNum.textContent;
+        var temp2 = input_stepArea.value;
+        temp *= 1;
+        temp2 *= 1;
+        temp -= temp2;
+        textarea_outputNum.textContent = temp;
     }
 }
 
 function increaseKeyAction(e){
     const keyCode = e.key;
     if(keyCode === '+'){
-        textarea_outputNum.textContent++;
+        var temp = textarea_outputNum.textContent;
+        var temp2 = input_stepArea.value;
+        temp *= 1;
+        temp2 *= 1;
+        temp += temp2;
+        textarea_outputNum.textContent = temp;
     }
 }
 
